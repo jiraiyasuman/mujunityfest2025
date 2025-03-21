@@ -1,0 +1,55 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Runs when code is pushed to the main branch
+  pull_request:
+    branches:
+      - main  # Runs on PR to main branch
+
+jobs:
+  build:
+    name: Build & Push Docker Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build Spring Boot App
+        run: mvn clean package -DskipTests
+
+      - name: Log in to Docker Hub
+        run: echo "Shikamaru#0814" | docker login -u "suman.talukdar53@gmail.com" --password-stdin
+
+      - name: Build Docker Image
+        run: docker build -t obitouchihasuman/mujunityfest:latest .
+
+      - name: Push Docker Image
+        run: docker push obitouchihasuman/mujunityfest:latest
+
+  deploy:
+    name: Deploy to Server
+    runs-on: windows-latest
+    needs: build  # Runs only after build job is successful
+
+    steps:
+      - name: Pull Latest Docker Image
+        run: docker pull obitouchihasuman/muj-unity-fest:latest
+
+      - name: Stop & Remove Existing Container
+        run: |
+          docker stop muj-fest-container || true
+          docker rm muj-fest-container || true
+
+      - name: Run Application with Docker Compose
+        run: |
+          docker-compose down
+          docker-compose up -d
