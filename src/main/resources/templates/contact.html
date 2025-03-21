@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <link href=
+          "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+          rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"/>
+</head>
+<body>
+<nav class="bg-blue-500">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Icon when menu is closed.
+
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex shrink-0 items-center">
+                    <img class="h-10 w-[25px]" src="https://i.postimg.cc/7LTGcLFq/logo.png" alt="Your Company">
+                </div>
+                <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                        <a th:href="@{/mujunityfest/home}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">MUJUNITYFEST</a>
+                        <a th:href="@{/mujunityfest/about}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">About</a>
+                        <a th:href="@{/mujunityfest/contact}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">Contact</a>
+                        <a th:href="@{/mujunityfest/event}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">Events</a>
+                        
+             </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Container -->
+<div class="min-h-screen flex flex-col items-center py-10">
+    <!-- Header -->
+    <div class="mb-10 text-center">
+        <h1 class="text-4xl font-bold text-gray-800">Contact Us</h1>
+        <p class="text-gray-600 mt-2">Feel free to reach out to our committee members!</p>
+    </div>
+
+    <!-- Committee Members Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+
+        <!-- Committee Member Card 1 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 1" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">Event head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 0000 00000</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Committee Member Card 2 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 2" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">promotion and Marketing Head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 00000 00000</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Committee Member Card 3 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 3" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">Security Head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 00000 00000</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Committee Member Card 4 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 3" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">Treasury Head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 00000 00000</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Committee Member Card 5 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 3" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">Logistics Head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 00000 00000</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Committee Member Card 6 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 3" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">Public Relations Head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 00000 00000</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Committee Member Card 7 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 3" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">Social Media & Publicity Head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 00000 00000</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Committee Member Card 8 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/ZRNVH4bQ/Leonardo-Anime-XL-ken-ryuji-from-tokyo-revengers-2.jpg" alt="Member 3" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">John Doe</h2>
+                <p class="text-gray-600">Design and Show Management Head</p>
+                <p class="text-gray-500 mt-2">📧 johndoe@example.com</p>
+                <p class="text-gray-500">📞 +91 00000 00000</p>
+
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Committee Member Card 9 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+            <img src="https://i.postimg.cc/TYJNBdVM/Untitled-design.jpg" alt="Member 3" class="w-full h-56 object-cover">
+            <div class="p-6">
+                <h2 class="text-xl font-semibold text-gray-800">Suman Talukdar</h2>
+                <p class="text-gray-600">Tech Team Head</p>
+                <p class="text-gray-500 mt-2">📧 suman.talukdar53@gmail.com</p>
+                <p class="text-gray-500">📞 +91 99036 08270</p>
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/maverick.ross.73" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://github.com/jiraiyasuman" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/suman.talukdar53/" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/suman-talukdar-29b3352b6/" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous"/>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-black py-4 mt-auto">
+    <div class="container mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-center items-center">
+
+            <!-- Center Section (Social Media Icons) -->
+            <div class="flex space-x-4">
+                <!-- Facebook -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <!-- Twitter -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-yellow-300 hover:text-black-300 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

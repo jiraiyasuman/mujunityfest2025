@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us</title>
+
+<!-- Tailwind CSS -->
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+	rel="stylesheet">
+
+<!-- jQuery and Slick Carousel -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+<!-- FontAwesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+	crossorigin="anonymous" />
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="bg-blue-500">
+		<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+			<div class="relative flex h-16 items-center justify-between">
+				<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+					<!-- Mobile menu button-->
+					<button type="button"
+						class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+						aria-controls="mobile-menu" aria-expanded="false">
+						<span class="absolute -inset-0.5"></span> <span class="sr-only">Open
+							main menu</span>
+						<svg class="block size-6" fill="none" viewBox="0 0 24 24"
+							stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+						<svg class="hidden size-6" fill="none" viewBox="0 0 24 24"
+							stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round"
+								stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+					</button>
+				</div>
+				<div
+					class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+					<div class="flex shrink-0 items-center">
+						<img class="h-10 w-[25px]"
+							src="https://i.postimg.cc/7LTGcLFq/logo.png" alt="MUJ Unity Fest">
+					</div>
+					<div class="hidden sm:ml-6 sm:block">
+						<div class="flex space-x-4">
+							<a th:href="@{/mujunityfest/home}"
+								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">MUJUNITYFEST</a>
+							<a th:href="@{/mujunityfest/about}"
+								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">About</a>
+							<a th:href="@{/mujunityfest/contact}"
+								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">Contact</a>
+							<a th:href="@{/mujunityfest/event}"
+								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">Events</a>
+							<a th:href="@{/mujunityfest/register}"
+								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">SignUp</a>
+							<a th:href="@{/mujunityfest/signin}"
+								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-black">Login</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Main Content -->
+
+	<div class="container mx-auto py-10">
+		<h1 class="text-3xl font-bold text-center mb-8">Event Details</h1>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<!-- Card 1 -->
+			<div
+				class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+				<img
+					src="https://i.postimg.cc/BQX352jn/Leonardo-Anime-XL-Games-2.jpg"
+					alt="Card 1" class="w-full h-48 object-cover">
+				<div class="p-4">
+					<h2 class="text-xl font-bold mb-2">Game Competition</h2>
+					<p class="text-gray-600">Welcome to the Game Competition</p>
+					<button
+						class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+						<a th:href="@{/mujunityfest/game}" class="inline-block">Details</a>
+					</button>
+				</div>
+			</div>
+
+			<!-- Card 2 -->
+			<div
+				class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+				<img
+					src="https://i.postimg.cc/BQX352jn/Leonardo-Anime-XL-Games-2.jpg"
+					alt="Card 2" class="w-full h-48 object-cover">
+				<div class="p-4">
+					<h2 class="text-xl font-bold mb-2">Rangoli Competition</h2>
+					<p class="text-gray-600">Welcome to the Rangoli Competition</p>
+					<button
+						class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+						<a th:href="@{/mujunityfest/rangoli}" class="inline-block">Details</a>
+					</button>
+				</div>
+			</div>
+			<!-- Card 3 -->
+			<div
+				class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+				<img
+					src="https://i.postimg.cc/BQX352jn/Leonardo-Anime-XL-Games-2.jpg"
+					alt="Card 3" class="w-full h-48 object-cover">
+				<div class="p-4">
+					<h2 class="text-xl font-bold mb-2">Art Competition</h2>
+					<p class="text-gray-600">Welcome to the Art Competition</p>
+					<button
+						class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+						<a th:href="@{/mujunityfest/art}" class="inline-block">Details</a>
+					</button>
+				</div>
+			</div>
+
+			<!-- Card 4 -->
+			<div
+				class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+				<img
+					src="https://i.postimg.cc/BQX352jn/Leonardo-Anime-XL-Games-2.jpg"
+					alt="Card 4" class="w-full h-48 object-cover">
+				<div class="p-4">
+					<h2 class="text-xl font-bold mb-2">Treasure Competition</h2>
+					<p class="text-gray-600">Welcome to the Game Competition</p>
+					<button
+						class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+						<a th:href="@{/mujunityfest/treasure}" class="inline-block">Details</a>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
